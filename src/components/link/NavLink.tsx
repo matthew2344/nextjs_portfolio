@@ -1,6 +1,7 @@
 import React from 'react'
 
 interface NavLinkProps {
+    key?: any,
     customClass?: string,
     title?: string,
     to?: string,

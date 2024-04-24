@@ -159,7 +159,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
 export default Navbar;
 
-const MobileNavLink = ({title, href}: { title: string; href: string }) => {
+const MobileNavLink = ({key, title, href}: { key:any, title: string; href: string }) => {
 
   const mobileLinkVars = {
     initial: {
