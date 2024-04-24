@@ -132,13 +132,14 @@ const Navbar: React.FC<NavbarProps> = ({
                 exit="initial"
                 className='flex flex-col h-full justify-center items-center gap-4'>
                 {
-                  navLinks.map((link, index) => {
+                  navLinks.map((link) => {
+                    const uniqueId = `${link.title}-${link.href}`;
                     return (
 
                       <div className="overflow-hidden">
 
                         <MobileNavLink
-                          key={index}
+                          key={uniqueId}
                           title={link.title}
                           href={link.href}
                         />
@@ -160,7 +161,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
 export default Navbar;
 
-const MobileNavLink = ({key, title, href}: { key:any, title: string; href: string }) => {
+const MobileNavLink = ({title, href}: { title: string; href: string }) => {
 
   const mobileLinkVars = {
     initial: {
