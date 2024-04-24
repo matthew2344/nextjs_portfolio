@@ -1,6 +1,5 @@
 import React from 'react'
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../ui/carousel'
-import { Card } from '../ui/card'
 
 export default function ProjectCarousel() {
 
