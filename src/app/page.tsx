@@ -1,5 +1,5 @@
 // import Navbar from "@/components/Navbar";
-'use client';
+"use client";
 import { useState, useEffect } from "react";
 import { MdOutlineAccessibilityNew  } from "react-icons/md";
 import Fab from "@/components/buttons/Fab";
