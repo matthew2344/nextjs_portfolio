@@ -136,10 +136,9 @@ const Navbar: React.FC<NavbarProps> = ({
                     const uniqueId = `${link.title}-${link.href}`;
                     return (
 
-                      <div className="overflow-hidden">
+                      <div className="overflow-hidden" key={uniqueId}>
 
                         <MobileNavLink
-                          key={uniqueId}
                           title={link.title}
                           href={link.href}
                         />
