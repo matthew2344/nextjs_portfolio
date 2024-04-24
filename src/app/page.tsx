@@ -79,7 +79,7 @@ export default function Home() {
                 </h1>
 
                 <p className="text-base font-inter mt-6">
-                  Hi I am <span className="underline underline-offset-4">Matthew Andre M. Butalid</span> I'm
+                  Hi I am <span className="underline underline-offset-4">Matthew Andre M. Butalid</span> I&apos;m
                   a web developer with a background in both front-end and back-end development.
                 </p>
 
@@ -99,7 +99,7 @@ export default function Home() {
                   </div>
 
                   <p className="mt-4">
-                    Completed a Bachelor's degree in Information Techonology Specializing in
+                    Completed a Bachelor&apos;s degree in Information Techonology Specializing in
                     Web And Mobile Applications with a focus on foundational programming concepts,
                     algorithms, and web development. Developed a strong understanding of software development principles.
 
@@ -305,7 +305,7 @@ export default function Home() {
                       </h1>
                       <br />
                       <p className="font-serif">
-                        I'd love to hear from you! Feel free to reach out with any questions, comments, or opportunities.
+                        I&apos;d love to hear from you! Feel free to reach out with any questions, comments, or opportunities.
                       </p>
                       <div className="flex flex-col mt-5">
                         <label htmlFor="email">Email</label>
