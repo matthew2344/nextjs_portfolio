@@ -95,9 +95,10 @@ const Navbar: React.FC<NavbarProps> = ({
 
             <div className="font-semibold space-x-4 text-base justify-center hidden md:flex md:flex-1">
               {
-                  navLinks.map((link, index) => {
-                    return <NavLink key={index} to={link.title} customClass={link.customClass} title={link.title}/>
-                  })
+                navLinks.map((link) => {
+                  const uniqueId = `${link.title}-${link.href}`; // create a unique identifier
+                  return <NavLink key={uniqueId} to={link.title} customClass={link.customClass} title={link.title} />
+                })
               }
             </div>
 
