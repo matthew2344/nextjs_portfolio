@@ -67,11 +67,10 @@ export default function Home() {
           {/* Hero */}
           <section className="relative w-full">
             <video
-              className="overlay2" 
               autoPlay={true} 
               muted 
               loop 
-              src="/video/hero.mp4"
+              src="https://raw.githubusercontent.com/matthew2344/nextjs_portfolio/main/public/video/Hero.mp4"
               style={{
                 height: '600px',
                 width: '100%',
