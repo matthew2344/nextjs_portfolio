@@ -28,7 +28,7 @@ export default function ProjectCarousel() {
 
   return (
     <div>
-        <Carousel className="w-full overflow-hidden">
+        <Carousel className="w-full overflow-hidden cursor-grab">
             <CarouselContent>
                 {projects.map((project, index) => (
                     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">

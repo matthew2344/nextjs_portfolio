@@ -19,6 +19,7 @@ import { FaFacebook, FaGithub, FaLaravel, FaLinkedin, FaNode, FaPhp, FaPython, F
 import { RiJavascriptLine } from "react-icons/ri";
 import ProjectCarousel from "@/components/carousel/ProjectCarousel";
 import MyFooter from "@/components/footer/MyFooter";
+import Image from "next/image"
 
 
 // import SkillBadge from "@/components/badge/SkillBadge";
@@ -60,10 +61,29 @@ export default function Home() {
 
 
   return (
-      <main className="flex flex-col bg-white text-stone-950 dark:text-neutral-50 dark:bg-black selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
+      <main className="flex flex-col bg-stone-100 text-stone-800 dark:text-neutral-50 dark:bg-black selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
           <Navbar/>
 
-
+          {/* Hero */}
+          <section className="relative w-full">
+            <video
+              className="overlay2" 
+              autoPlay={true} 
+              muted 
+              loop 
+              src="/video/hero.mp4"
+              style={{
+                height: '600px',
+                width: '100%',
+                objectFit: 'cover'
+              }}
+            />
+            <div className="absolute mx-4 inset-0 flex items-center justify-center">
+              <h1 className="text-xl md:text-2xl xl:text-4xl p-3 rounded-lg text-white dark:text-black bg-black dark:bg-white">
+                { "Crafting innovative solutions, one line of code at a time" } 
+              </h1>
+            </div>
+          </section>
 
 
           {/* About Me */}
@@ -99,10 +119,7 @@ export default function Home() {
                   </div>
 
                   <p className="mt-4">
-                    Completed a Bachelor&apos;s degree in Information Techonology Specializing in
-                    Web And Mobile Applications with a focus on foundational programming concepts,
-                    algorithms, and web development. Developed a strong understanding of software development principles.
-
+                    { "Completed a Bachelor's degree in Information Techonology Specializing in Web And Mobile Applications with a focus on foundational programming concepts, algorithms, and web development. Developed a strong understanding of software development principles." }
                   </p>
                 </section>
 
@@ -239,9 +256,46 @@ export default function Home() {
               
           </section>
 
-          <section className="font-serif mx-8 mt-20 border-black dark:border-white">
-            <h1 className="font-sans font-black text-sm lg:text-base md:text-xs sm:text-left">PROJECTS</h1>
-            <ProjectCarousel/>
+          <section className="flex flex-wrap md:flex-nowrap gap-10 font-serif mx-5 xl:mx-20 mt-20 border-black dark:border-white">
+            <div className="md:basis-4/12">
+              <h1 className="text-5xl mb-4"><strong>My</strong> Projects</h1>
+              <p className="text-lg">
+                { 
+                  "Check out some of the projects I've worked on. From web applications to mobile apps, I've got a diverse portfolio." 
+                }
+              </p>
+            </div>
+            <div className="sm:grid flex justify-center flex-wrap sm:grid-cols-3 gap-5">
+              <Image
+                className="" 
+                src="/placeholder.svg"
+                height={450}
+                width={350}
+                alt="Project 1"
+              />
+              <Image 
+                src="/placeholder.svg"
+                height={450}
+                width={350}
+                alt="Project 1"
+              />
+              <Image 
+                src="/placeholder.svg"
+                height={450}
+                width={350}
+                alt="Project 1"
+              />
+              <Image 
+                src="/placeholder.svg"
+                height={450}
+                width={350}
+                alt="Project 1"
+              />
+
+
+
+            </div>
+            {/* <ProjectCarousel/> */}
           </section>
 
           {/* Contact */}

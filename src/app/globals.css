@@ -74,3 +74,20 @@
       @apply bg-background text-foreground;
     }
   }
+
+
+
+  .overlay2 {
+    position: relative;
+  }
+  
+  .overlay2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust the alpha value (0.5) to control the shade intensity */
+    z-index: 1;
+  }

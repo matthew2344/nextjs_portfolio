@@ -87,7 +87,7 @@ const Navbar: React.FC<NavbarProps> = ({
 
     return(
       <>
-        <nav className="font-sans fixed w-full bg-white dark:bg-black z-20">
+        <nav className="font-sans fixed w-full bg-stone-100 dark:bg-black z-20">
           <div className="flex mx-auto px-4 py-3">
             <div className='text-base font-semibold uppercase my-auto hidden md:flex'>
               portfolio
