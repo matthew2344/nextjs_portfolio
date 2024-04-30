@@ -315,7 +315,6 @@ export default function Home() {
           
           <section className="mx-8 mt-20">
             <div className="mb-4">
-              <h1 className="text-4xl mb-4 font-sans"><strong>SERVICES —</strong></h1>
               <p className="text-lg">
                 { 
                   "Check out the services I offer to help you with your project." 
@@ -392,8 +391,8 @@ export default function Home() {
                         +63 9684262167
                       </span>
                     </p>
-                    <a href="" className="mt-2 inline-flex justify-center items-center hover:underline">
-                      Resume <MdDownload/> 
+                    <a href="/files/MATTHEW-RESUME-NEW.pdf" download className="mt-2 inline-flex justify-center items-center hover:underline">
+                      <MdDownload/> matthew-resume.pdf 
                     </a>
                   </li>
                   <li className="md:col-span-2 lg:col-span-2 xl:col-span-4 text-base lg:text-lg border-t-2 border-black/50 dark:border-white/50">
