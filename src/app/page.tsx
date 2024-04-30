@@ -1,7 +1,7 @@
 // import Navbar from "@/components/Navbar";
 "use client";
 import { useState, useEffect } from "react";
-import { MdOutlineAccessibilityNew  } from "react-icons/md";
+import { MdDownload, MdOutlineAccessibilityNew  } from "react-icons/md";
 import Fab from "@/components/buttons/Fab";
 import AccessibilityModal from "@/components/modals/AccessibilityModal";
 import { AnimatePresence, motion } from "framer-motion"; 
@@ -12,14 +12,15 @@ import MarqueeRight from "@/components/marquee/MarqueeRight";
 import TechnologyList from '@/components/marquee/TechnologyList';
 import TechnologyList2 from '@/components/marquee/TechnologyList2';
 import TechnologyList3 from '@/components/marquee/TechnologyList3';
-import FramerIcon from "@/components/icon/FramerIcon";
-import { FaInstagram, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
+
+import { FaChevronDown, FaCogs, FaInstagram, FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 import { SiKotlin, SiMongodb, SiMysql, SiNextdotjs } from "react-icons/si";
-import { FaFacebook, FaGithub, FaLaravel, FaLinkedin, FaNode, FaPhp, FaPython, FaReact, FaVuejs } from "react-icons/fa6";
+import { FaCloud, FaCode, FaDatabase, FaFacebook, FaGithub, FaLaravel, FaLinkedin, FaMobileScreen, FaNode, FaPaintbrush, FaPhp, FaPython, FaReact, FaVuejs } from "react-icons/fa6";
 import { RiJavascriptLine } from "react-icons/ri";
-import ProjectCarousel from "@/components/carousel/ProjectCarousel";
+import { Link } from "react-scroll"
 import MyFooter from "@/components/footer/MyFooter";
 import Image from "next/image"
+import { EvervaultCardDemo } from "@/components/card/EvervaultCardDemo";
 
 
 // import SkillBadge from "@/components/badge/SkillBadge";
@@ -58,7 +59,19 @@ export default function Home() {
     setModal(false);
   }
 
+  const isDevEnv = process.env.NODE_ENV !== 'production';
+  const [videoUrl, setVideoUrl] = useState("");
+  useEffect(() => {
+    if(isDevEnv) {
+      console.log('Running in development mode');
+      setVideoUrl("/video/Hero.mp4");
+    } else {
+      console.log('Running in production mode');
+      setVideoUrl("https://raw.githubusercontent.com/matthew2344/nextjs_portfolio/main/public/video/Hero.mp4");
+    }
+  },[])
 
+  
 
   return (
       <main className="flex flex-col bg-stone-100 text-stone-800 dark:text-neutral-50 dark:bg-black selection:bg-black selection:text-white dark:selection:bg-white dark:selection:text-black">
@@ -70,7 +83,7 @@ export default function Home() {
               autoPlay={true} 
               muted 
               loop 
-              src="https://raw.githubusercontent.com/matthew2344/nextjs_portfolio/main/public/video/Hero.mp4"
+              src={videoUrl}
               style={{
                 height: '600px',
                 width: '100%',
@@ -78,22 +91,28 @@ export default function Home() {
               }}
             />
             <div className="absolute mx-4 inset-0 flex items-center justify-center">
-              <h1 className="text-xl md:text-2xl xl:text-4xl p-3 rounded-lg text-white dark:text-black bg-black dark:bg-white">
+              <h1 className="text-xl md:text-2xl xl:text-4xl p-3 rounded-lg text-white bg-black">
                 { "Crafting innovative solutions, one line of code at a time" } 
               </h1>
+            </div>
+
+            <div className="absolute flex justify-center py-2 bottom-0 left-0 right-0">
+              <Link to="About" smooth={true} duration={300} className="text-white text-2xl p-2 rounded-full bg-black animate-bounce cursor-pointer">
+                <FaChevronDown/>
+              </Link>
             </div>
           </section>
 
 
           {/* About Me */}
-          <section className="font-serif about-me md:px-20 md:py-20 flex pt-16 px-8">
+          <section id="About" className="font-serif about-me md:px-20 md:py-20 flex pt-16 px-8">
 
 
             <div className="md:grid md:grid-cols-2 md:gap-10 sm:flex">
 
               <div className="flex flex-col">
                 
-                <h1 id="About" className="font-inter text-2xl font-black uppercase [&>span]:text-3xl">
+                <h1 className="font-inter text-2xl font-black uppercase [&>span]:text-3xl">
                     <span>M</span>atthew <span>A</span>ndre <span>B</span>utalid
                 </h1>
 
@@ -235,7 +254,7 @@ export default function Home() {
                       <h1 className="text-2xl">Circuit Solutions Inc.</h1>
                       <h2 className="text-sm">Web Developer Intern</h2>
                       <h2 className="text-sm">September 2023 - December 2023</h2>
-                      <h3 className="text-xs">Unit B 14th Flr. Belvedere Tower, San Miguel Ave, Ortigas Center, Pasig, 1605 Metro Manila · On-site</h3>
+                      <h3 className="text-xs">San Miguel Ave, Ortigas Center, Pasig, Metro Manila · On-site</h3>
                       <p className="mt-5">Developed a web application to track Technical Field Employee time and attendance using VueJS for the front-end and Laravel as the backend framework. Implemented a server-side pagination and responsive UI design for the website. Develop and improve the facial recognition in Remote Time in and Time Out Mobile Application.</p>
                     </article>
                   </li>
@@ -244,7 +263,7 @@ export default function Home() {
                       <h1 className="text-2xl">Circuit Solutions Inc.</h1>
                       <h2 className="text-sm">Web Developer Intern</h2>
                       <h2 className="text-sm">April 2023 - July 2023</h2>
-                      <h3 className="text-xs">Unit B 14th Flr. Belvedere Tower, San Miguel Ave, Ortigas Center, Pasig, 1605 Metro Manila · On-site</h3>
+                      <h3 className="text-xs">San Miguel Ave, Ortigas Center, Pasig, 1605 Metro Manila · On-site</h3>
                       <p className="mt-5">Developed a Remote Time In and Time Out Mobile Application for Android as a Full-Stack Developer Intern. Designed and built the user interface using VueJS and CapacitorJS, utilizing both web technology and native functionalities for the application. Built a secure back-end API with Laravel and a MySQL database. Implemented token-based authentication for secure access.</p>
                     </article>
                   </li>
@@ -255,9 +274,9 @@ export default function Home() {
               
           </section>
 
-          <section className="flex flex-wrap md:flex-nowrap gap-10 font-serif mx-5 xl:mx-20 mt-20 border-black dark:border-white">
+          <section className="flex flex-wrap md:flex-nowrap gap-10 font-sans mx-5 xl:mx-20 mt-20 border-black dark:border-white">
             <div className="md:basis-4/12">
-              <h1 className="text-5xl mb-4"><strong>My</strong> Projects</h1>
+              <h1 className="text-5xl mb-4 font-serif"><strong>My</strong> Projects</h1>
               <p className="text-lg">
                 { 
                   "Check out some of the projects I've worked on. From web applications to mobile apps, I've got a diverse portfolio." 
@@ -290,12 +309,30 @@ export default function Home() {
                 width={350}
                 alt="Project 1"
               />
-
-
-
             </div>
             {/* <ProjectCarousel/> */}
           </section>
+          
+          <section className="mx-8 mt-20">
+            <div className="mb-4">
+              <h1 className="text-4xl mb-4 font-sans"><strong>SERVICES —</strong></h1>
+              <p className="text-lg">
+                { 
+                  "Check out the services I offer to help you with your project." 
+                }
+              </p>
+            </div>
+            <div className="font-sans sm:grid flex justify-center flex-wrap sm:grid-cols-2 md:grid-cols-3 gap-5">
+              <EvervaultCardDemo title="Web Development" icon={<FaCode className="text-5xl"/>} text="I specialize in building modern, responsive, and scalable web applications using the latest technologies." />
+              <EvervaultCardDemo title="Mobile Development" icon={<FaMobileScreen className="text-5xl"/>} text="I create cross-platform mobile apps that provide a seamless user experience on both iOS and Android." />
+              <EvervaultCardDemo title="Backend Development" icon={<FaDatabase className="text-5xl"/>} text="I build scalable and secure backend systems using modern technologies like Node.js, Express, and MongoDB." />
+              <EvervaultCardDemo title="UI/UX Design" icon={<FaPaintbrush className="text-5xl"/>} text="I create visually appealing and user-friendly designs that enhance the overall experience of your application." />
+              <EvervaultCardDemo title="Cloud Infrastructure" icon={<FaCloud className="text-5xl"/>} text="I help you set up and manage your cloud infrastructure, ensuring your applications are scalable and secure." />
+              <EvervaultCardDemo title="DevOps" icon={<FaCogs className="text-5xl"/>} text="I implement DevOps practices to streamline your development and deployment processes, ensuring faster and more reliable releases." />
+            </div>
+          </section>
+
+
 
           {/* Contact */}
           <section className="font-serif px-5 xl:px-20 py-10 my-16 dark:bg-[#000]">
@@ -308,7 +345,7 @@ export default function Home() {
 
                     <p className="mt-8">
                       <strong className="">
-                        2344 Sunny Villas Pearl St. East Fairview,
+                        Sunny Villas Pearl St. East Fairview,
                       </strong>
                       <br />
                       Quezon City, 1118
@@ -343,13 +380,21 @@ export default function Home() {
                     </ul>
                   </li>
                   <li className="text-base lg:text-lg border-t-2 border-black/50 dark:border-white/50 py-2 lg:py-5">
-                    <h2 className="text-3xl lg:text-5xl">Contact</h2>
+                    <h2 className="text-3xl lg:text-5xl">Other</h2>
 
                     <p className="mt-8 lg:mt-12">
                       <span className="hover:ps-2 hover:pt-2 hover:p-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer">
                         matthewandrebutalid@gmail.com
                       </span>
                     </p>
+                    <p className="mt-2">
+                      <span className="hover:ps-2 hover:pt-2 hover:p-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer">
+                        +63 9684262167
+                      </span>
+                    </p>
+                    <a href="" className="mt-2 inline-flex justify-center items-center hover:underline">
+                      Resume <MdDownload/> 
+                    </a>
                   </li>
                   <li className="md:col-span-2 lg:col-span-2 xl:col-span-4 text-base lg:text-lg border-t-2 border-black/50 dark:border-white/50">
                     <div className="px-2 py-2 lg:py-5 xl:py-12 ">
