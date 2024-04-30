@@ -10,7 +10,7 @@ export function EvervaultCardDemo( { icon, title, text } : { icon?: ReactNode; t
       <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
 
       <EvervaultCard icon={icon} />
-      <h1 className="text-black dark:text-white text-lg font-bold mt-4">{title}</h1>
+      <h1 className="text-black dark:text-white text-lg font-bold mt-4 font-serif">{title}</h1>
       <h2 className="dark:text-white text-black mt-4 text-sm font-light">
         {text}
       </h2>
