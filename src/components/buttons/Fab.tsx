@@ -18,7 +18,7 @@ const Fab: React.FC<FabProps> = ({
   customClassName,
   onClick,
 }) => {
-  const fabClassName = `hidden md:flex fixed z-40 rounded-full drop-shadow-lg flex justify-center items-center text-4xl ${customClassName}`
+  const fabClassName = `rounded-full drop-shadow-lg flex justify-center items-center text-4xl ${customClassName}`
 
   return (
     <motion.button

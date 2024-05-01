@@ -70,6 +70,9 @@ const AccessibilityModal: React.FC<ModalProps> = ({
                     <li className="flex py-4 first:pt-0 last:pb-0">
                         <Toggle LabelName='ADHD Friendly Mode' checked={false}/>
                     </li>
+                    <li className="flex py-4 first:pt-0 last:pb-0">
+                        <Toggle LabelName='Text Magnifier' checked={false}/>
+                    </li>
                 </ul>
             </section>
         </motion.div>

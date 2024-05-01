@@ -274,7 +274,7 @@ export default function Home() {
               
           </section>
 
-          <section className="flex flex-wrap md:flex-nowrap gap-10 font-sans mx-5 xl:mx-20 mt-20 border-black dark:border-white">
+          <section className="flex flex-wrap md:flex-nowrap gap-10 font-sans mx-5 xl:mx-20 my-16 border-black dark:border-white">
             <div className="md:basis-4/12">
               <h1 className="text-5xl mb-4 font-serif"><strong>My</strong> Projects</h1>
               <p className="text-lg">
@@ -312,29 +312,64 @@ export default function Home() {
             </div>
             {/* <ProjectCarousel/> */}
           </section>
-          
-          <section className="mx-8 mt-20">
-            <div className="mb-4">
-              <p className="text-lg">
-                { 
-                  "Check out the services I offer to help you with your project." 
-                }
-              </p>
-            </div>
-            <div className="font-sans sm:grid flex justify-center flex-wrap sm:grid-cols-2 md:grid-cols-3 gap-5">
-              <EvervaultCardDemo title="Web Development" icon={<FaCode className="text-5xl"/>} text="I specialize in building modern, responsive, and scalable web applications using the latest technologies." />
-              <EvervaultCardDemo title="Mobile Development" icon={<FaMobileScreen className="text-5xl"/>} text="I create cross-platform mobile apps that provide a seamless user experience on both iOS and Android." />
-              <EvervaultCardDemo title="Backend Development" icon={<FaDatabase className="text-5xl"/>} text="I build scalable and secure backend systems using modern technologies like Node.js, Express, and MongoDB." />
-              <EvervaultCardDemo title="UI/UX Design" icon={<FaPaintbrush className="text-5xl"/>} text="I create visually appealing and user-friendly designs that enhance the overall experience of your application." />
-              <EvervaultCardDemo title="Cloud Infrastructure" icon={<FaCloud className="text-5xl"/>} text="I help you set up and manage your cloud infrastructure, ensuring your applications are scalable and secure." />
-              <EvervaultCardDemo title="DevOps" icon={<FaCogs className="text-5xl"/>} text="I implement DevOps practices to streamline your development and deployment processes, ensuring faster and more reliable releases." />
-            </div>
+
+
+          {/* services */}
+          <section className="my-16 mx-12">
+            <article className="font-serif">
+              <ul className="gap-10 md:grid md:grid-cols-3 md:gap-20">
+                <li className="min-h-56 px-8 border-s border-black/30 dark:border-white/30 first:border-s-0 first:px-0">
+                  <h1 className="text-7xl">
+                    <strong>My</strong>
+                    <br />
+                    Services
+                  </h1>
+                  <p className="mt-2 font-sans">
+                    I specialize in building modern, responsive, and scalable web applications using the latest technologies.
+                  </p>
+                </li>
+                <li className="mt-4 md:mt-0 min-h-56 px-8 border-s border-black/30 dark:border-white/30 first:border-s-0 first:px-0">
+                  <h1 className="text-3xl mb-12"><strong>Web</strong> Development</h1>
+                  <p className="leading-6 text-stone-900/70 dark:text-white/70">
+                    {"I specialize in building modern, responsive, and scalable web applications using the latest technologies."}
+                  </p>
+                </li>
+                <li className="min-h-56 px-8 border-s border-black/30 dark:border-white/30 first:border-s-0 first:px-0">
+                  <h1 className="text-3xl mb-12"><strong>Mobile</strong> Development</h1>
+                  <p className="leading-6 text-stone-900/70 dark:text-white/70">
+                    {"I create cross-platform mobile apps that provide a seamless user experience on both iOS and Android."}
+                  </p>
+                </li>
+                <li className="min-h-56 px-8 border-s border-black/30 dark:border-white/30 first:border-s-0 first:px-0">
+                  <h1 className="text-3xl mb-12"><strong>Backend</strong> Development</h1>
+                  <p className="leading-6 text-stone-900/70 dark:text-white/70">
+                    {"I build scalable and secure backend systems using modern technologies like Node.js, Express, and MongoDB."}
+                  </p>
+                </li>
+                <li className="min-h-56 px-8 border-s border-black/30 dark:border-white/30 first:border-s-0 first:px-0">
+                  <h1 className="text-3xl mb-12"><strong>UI/UX</strong> Design</h1>
+                  <p className="leading-6 text-stone-900/70 dark:text-white/70">
+                    {"I create visually appealing and user-friendly designs that enhance the overall experience of your application."}
+                  </p>
+                </li>
+                <li className="min-h-56 px-8 border-s border-black/30 dark:border-white/30 first:border-s-0 first:px-0">
+                  <h1 className="text-3xl mb-12"><strong>Cloud</strong> Infastructure</h1>
+                  <p className="leading-6 text-stone-900/70 dark:text-white/70">
+                    {"I help you set up and manage your cloud infrastructure, ensuring your applications are scalable and secure."}
+                  </p>
+                </li>
+                <li className="min-h-56 px-8 border-s border-black/30 dark:border-white/30 first:border-s-0 first:px-0">
+                  <h1 className="text-3xl mb-12"><strong>Devops</strong></h1>
+                  <p className="leading-6 text-stone-900/70 dark:text-white/70">
+                    {"I implement DevOps practices to streamline your development and deployment processes, ensuring faster and more reliable releases."}
+                  </p>
+                </li>
+              </ul>
+            </article>
           </section>
 
-
-
           {/* Contact */}
-          <section className="font-serif px-5 xl:px-20 py-10 my-16 dark:bg-[#000]">
+          <section className="font-serif px-5 xl:px-20 my-12 dark:bg-[#000]">
             <article>
               <h1 className="new-roman text-5xl md:text-7xl"><strong>Get</strong><br className="md:hidden"/> in Touch</h1>
               <div className="mt-5 md:mt-12 pb-8">
@@ -356,11 +391,11 @@ export default function Home() {
                     <ul className="mt-8 font-inter">
                       <li className="flex items-center space-x-1">
                         <FaLinkedin className="w-5 h-5 my-1"/>
-                        <a href="" className="leading-none tracking-tighter hover:underline">/in/matthew</a>
+                        <a href="https://www.linkedin.com/in/matthew-butalid/" target="_blank" className="leading-none tracking-tighter hover:underline">/in/matthew-butalid</a>
                       </li>
-                      <li className="flex items-center space-x-1">
+                      <li className="flex items-center space-x-1 mt-2">
                         <FaGithub className="w-5 h-5 my-1"/>
-                        <a href="" className="leading-none tracking-tighter hover:underline">@matthew2344</a>
+                        <a href="https://github.com/matthew2344" target="_blank" className="leading-none tracking-tighter hover:underline">@matthew2344</a>
                       </li>
                     </ul>
                   </li>
@@ -370,17 +405,16 @@ export default function Home() {
                     <ul className="mt-8 lg:mt-12 text-xl">
                       <li className="flex items-center space-x-1">
                         <FaFacebook className="w-5 h-5 my-1"/>
-                        <a href="" className="leading-none tracking-tighter hover:underline">@matthewbutalid</a>
+                        <a href="https://www.facebook.com/matthew.butalid.79/" target="_blank" className="leading-none tracking-tighter hover:underline">@matthewbutalid</a>
                       </li>
                       <li className="flex items-center space-x-1">
                         <FaInstagram className="w-5 h-5 my-1"/>
-                        <a href="" className="leading-none tracking-tighter hover:underline">@matthewbutalid</a>
+                        <a href="#" className="leading-none tracking-tighter hover:underline">@matthewbutalid</a>
                       </li>
                     </ul>
                   </li>
                   <li className="text-base lg:text-lg border-t-2 border-black/50 dark:border-white/50 py-2 lg:py-5">
                     <h2 className="text-3xl lg:text-5xl">Other</h2>
-
                     <p className="mt-8 lg:mt-12">
                       <span className="hover:ps-2 hover:pt-2 hover:p-1 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black cursor-pointer">
                         matthewandrebutalid@gmail.com
@@ -394,41 +428,51 @@ export default function Home() {
                     <a href="/files/MATTHEW-RESUME-NEW.pdf" download className="mt-2 inline-flex justify-center items-center hover:underline">
                       <MdDownload/> matthew-resume.pdf 
                     </a>
+
                   </li>
                   <li className="md:col-span-2 lg:col-span-2 xl:col-span-4 text-base lg:text-lg border-t-2 border-black/50 dark:border-white/50">
                     <div className="px-2 py-2 lg:py-5 xl:py-12 ">
-                      <h1 className="new-roman text-3xl lg:text-4xl text-black dark:text-white">
-                        Send an Email
+                      <h1 className="text-3xl lg:text-4xl text-black dark:text-white mb-2">
+                        Send an <span className="font-sans font-bold text-[#0070f3]">Email</span>
                       </h1>
-                      <br />
-                      <p className="font-serif">
-                        I&apos;d love to hear from you! Feel free to reach out with any questions, comments, or opportunities.
+                      <p className="font-sans">
+                        {"I'd love to hear from you! Feel free to reach out with any questions, comments, or opportunities."}
                       </p>
-                      <div className="flex flex-col mt-5">
-                        <label htmlFor="email">Email</label>
-                        <input name="email" className="w-full md:w-96 focus:bg-black focus:text-white dark:focus:bg-white dark:focus:text-black ring-0 placeholder:text-stone-500 border-b border-black dark:border-white bg-white dark:bg-black" type="email" placeholder="Email"/>
-                      </div>
-                      <div className="flex flex-col mt-5">
-                        <label htmlFor="name">Name</label>
-                        <input name="name" className="w-full md:w-96 focus:bg-black focus:text-white dark:focus:bg-white dark:focus:text-black ring-0 placeholder:text-stone-500 border-b border-black dark:border-white bg-white dark:bg-black" type="text" placeholder="Name"/>
-                      </div>
-                      <div className="flex flex-col mt-5">
-                        <label htmlFor="Message">Message</label>
-                        <textarea name="Message" className="w-full md:w-96 rounded-md border border-black dark:border-white bg-white dark:bg-black" rows={10}></textarea>
-                      </div>
+
+                      <ContactForm/>
+
+                      {/* <form action="">   
+                        <div className="flex flex-col mt-5">
+                          <label htmlFor="email">Email</label>
+                          <input name="email" className="w-full md:w-96 focus:bg-black focus:text-white dark:focus:bg-white dark:focus:text-black ring-0 placeholder:text-stone-500 border-b border-black dark:border-white bg-white dark:bg-black" type="email" placeholder="Email"/>
+                        </div>
+                        <div className="flex flex-col mt-5">
+                          <label htmlFor="name">Name</label>
+                          <input name="name" className="w-full md:w-96 focus:bg-black focus:text-white dark:focus:bg-white dark:focus:text-black ring-0 placeholder:text-stone-500 border-b border-black dark:border-white bg-white dark:bg-black" type="text" placeholder="Name"/>
+                        </div>
+                        <div className="flex flex-col mt-5">
+                          <label htmlFor="Message">Message</label>
+                          <textarea name="Message" className="w-full md:w-96 rounded-md border border-black dark:border-white bg-white dark:bg-black" rows={10}></textarea>
+                        </div>
+                        <button type="submit" className="font-sans font-semibold w-full md:w-96 rounded-sm bg-[#0070f3] text-white mt-2 p-1">SUBMIT</button>
+                      </form> */}
+
                     </div>
                   </li>
                 </ul>
               </div>
             </article>
           </section>
+
+
+
           
           <MyFooter/>
         <Fab 
           whileHover={{ scale: 1.2 }} 
           whileTap={{ scale: 0.8 }} 
           title="Accessibility" 
-          customClassName="bottom-2 left-2 bg-slate-50 w-12 h-12 bg-white text-black border-2 border-black dark:bg-black dark:border-white dark:text-white"
+          customClassName="hidden md:flex fixed z-40 bottom-2 left-2 bg-slate-50 w-12 h-12 bg-white text-black border-2 border-black dark:bg-black dark:border-white dark:text-white"
           icon={<MdOutlineAccessibilityNew/>}
           onClick={() => { openModal ? handleClose() : handleOpen() }}
         />
@@ -440,4 +484,73 @@ export default function Home() {
 
       </main>
   );
+}
+
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    email: '',
+    name: '',
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    
+    try {
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type' : 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        console.log('Email sent successfully');
+        console.log('Data:',formData);
+
+        setFormData({ email: '', name: '', message: '' });
+      } else {
+        console.error('Error sending email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  }
+
+  return (
+    <form className="font-sans" onSubmit={handleSubmit}>   
+      <div className="flex flex-col mt-5">
+        <label htmlFor="email">Email</label>
+        <input 
+          name="email"
+          typeof="email"
+          value={formData.email}
+          onChange={handleChange} 
+          className="w-full md:w-96 ring-0 placeholder:text-stone-500 border-b border-black dark:border-white bg-white dark:bg-black" type="email" placeholder="Email"/>
+      </div>
+      <div className="flex flex-col mt-5">
+        <label htmlFor="name">Name</label>
+        <input
+         name="name" 
+         typeof="text"
+         value={formData.name}
+         onChange={handleChange}
+         className="w-full md:w-96 ring-0 placeholder:text-stone-500 border-b border-black dark:border-white bg-white dark:bg-black" type="text" placeholder="Name"/>
+      </div>
+      <div className="flex flex-col mt-5">
+        <label htmlFor="message">Message</label>
+        <textarea
+         name="message" 
+         value={formData.message}
+         onChange={handleChange}
+         className="w-full md:w-96 rounded-md border ring-0 border-black dark:border-white bg-white dark:bg-black" rows={10}/>
+      </div>
+      <button type="submit" className="font-sans font-semibold w-full md:w-96 rounded-sm bg-[#0070f3] text-white mt-2 p-1">SUBMIT</button>
+    </form>
+  )
 }
