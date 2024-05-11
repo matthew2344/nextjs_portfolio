@@ -523,7 +523,7 @@ const ContactForm = () => {
   }
 
   return (
-    <form className="font-sans" onSubmit={handleSubmit}>   
+    <form className="overflow-hidden font-sans" onSubmit={handleSubmit}>   
       <div className="flex flex-col mt-5">
         <label htmlFor="email">Email</label>
         <input 
