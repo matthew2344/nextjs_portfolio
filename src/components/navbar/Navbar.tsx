@@ -89,7 +89,7 @@ const Navbar: React.FC<NavbarProps> = ({
         <nav 
           className="font-sans fixed w-full bg-stone-100 dark:bg-black z-20">
           <div className="flex mx-auto px-4 py-3">
-            <div className='text-end font-serif font-extralight indent-0 text-base my-auto hidden md:flex'>
+            <div className=' font-serif font-extralight indent-0 text-base my-auto hidden md:flex'>
               <span>
                 Matthew 
                 <br className='leading-0 inline-block'/>
@@ -126,7 +126,7 @@ const Navbar: React.FC<NavbarProps> = ({
             className="fixed left-0 top-0 w-full h-screen bg-yellow-400 text-black p-10 font-lora origin-top z-50">
             <div className="flex h-full flex-col">
               <div className="flex justify-between">
-                <h1 className="text-end text-lg text-black">Matthew <br /> Andre Butalid</h1>
+                <h1 className=" text-lg text-black">Matthew <br /> Andre Butalid</h1>
                 <p className="cursor-pointer text-md text-black" onClick={() => setDrawer(false)}>CLOSE</p>
               </div>
               <motion.div 
