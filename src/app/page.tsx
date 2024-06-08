@@ -548,7 +548,7 @@ const ContactForm = () => {
          name="message" 
          value={formData.message}
          onChange={handleChange}
-         className="w-full md:w-96 rounded-md border ring-0 border-black dark:border-white bg-white dark:bg-black" rows={10}/>
+         className="md:w-96 rounded-md border ring-0 border-black dark:border-white bg-white dark:bg-black" rows={10}/>
       </div>
       <button type="submit" className="font-sans font-semibold w-full md:w-96 rounded-sm bg-[#0070f3] text-white mt-2 p-1">SUBMIT</button>
     </form>
